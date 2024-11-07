@@ -21,13 +21,16 @@ public class Main
     Scanner input = new Scanner(System.in);
     System.out.println("Enter a number 0 - 50");
     int x = input.nextInt();
+    int counter = 0;
     if(x < 0 || x > 50) {
       System.out.println("erorr");
     } else {
-      for(int i = 0; i <= 50; i++) {
+      for(int i = x; i <= 50; i++) {
           System.out.print(i + " ");
-          if(i % 5 == 0) {
-            System.out.println(""); // line break
+          counter++;
+          if(counter == 5) {
+            System.out.println("");
+            counter = 0;
           }
       }
     }
